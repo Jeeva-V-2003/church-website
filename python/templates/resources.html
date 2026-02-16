@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Resources - Bible Standard Ministries{% endblock %}
+
+{% block content %}
+<div class="resources-page">
+    <div class="page-header">
+        <h1>Resources</h1>
+        <p>Magazines and Bible Studies</p>
+    </div>
+
+    <section class="resources-section">
+        <div class="container">
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <i class="fas fa-newspaper resource-icon"></i>
+                    <h2>Magazines</h2>
+                    <p>The Bible Standard magazine - Nearly a century of Bible truth and answers to religious questions</p>
+                    <a href="/magazine" class="resource-btn">View Magazines</a>
+                </div>
+
+                <div class="resource-card">
+                    <i class="fas fa-book resource-icon"></i>
+                    <h2>Bible Studies</h2>
+                    <p>Comprehensive examination of Bible subjects designed to aid in personal and group Bible study</p>
+                    <a href="/bible-study" class="resource-btn">View Studies</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
