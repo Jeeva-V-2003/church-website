@@ -1,223 +1,441 @@
 .home-page {
   margin-top: 70px;
-  min-height: calc(100vh - 70px);
 }
 
+/* Hero Section - Dispensation Chart and Motto */
 .hero-section {
+  background: #ffffff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.hero-images {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.dispensation-chart {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.motto-card {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Welcome Section with Background */
+.welcome-section {
   position: relative;
-  height: 85vh;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(139, 69, 19, 0.1) 0%, rgba(212, 165, 116, 0.2) 100%);
-  overflow: hidden;
+  background-image: url('../assets/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 4rem 2rem;
 }
 
-.hero-content {
-  text-align: center;
+.welcome-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.welcome-section .container {
+  position: relative;
   z-index: 2;
-  padding: 2rem;
+  text-align: center;
+  color: #ffffff;
 }
 
-.hero-content h1 {
+.welcome-section h2 {
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 3.5rem;
-  color: var(--primary);
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  font-weight: 700;
+  letter-spacing: 5px;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
-.hero-content p {
-  font-size: 1.5rem;
-  color: var(--dark);
+.welcome-section .large-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  letter-spacing: 5px;
   margin-bottom: 2rem;
-  font-style: italic;
+  line-height: 1.6;
 }
 
-.cta-button {
+.welcome-section .large-text a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.welcome-section blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #cccccc;
+}
+
+/* Social Media Promo */
+.social-promo {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  padding: 3rem 2rem;
+}
+
+.promo-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.youtube-icon {
+  font-size: 5rem;
+  color: #FF0000;
+  filter: drop-shadow(0 4px 12px rgba(255, 0, 0, 0.5));
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.promo-text {
+  flex: 1;
+  min-width: 250px;
+  color: #ffffff;
+}
+
+.promo-text h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.promo-text p {
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+.promo-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.youtube-btn,
+.facebook-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  padding: 1rem 2.5rem;
-  background: var(--primary);
-  color: var(--white);
-  text-decoration: none;
+  padding: 1rem 2rem;
   border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
   transition: all 0.3s;
-  box-shadow: 0 8px 20px var(--shadow);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-.cta-button:hover {
+.youtube-btn {
+  background: #FF0000;
+  color: #ffffff;
+}
+
+.youtube-btn:hover {
+  background: #cc0000;
   transform: translateY(-3px);
-  box-shadow: 0 12px 30px var(--shadow);
-  background: var(--dark);
+  box-shadow: 0 6px 20px rgba(255, 0, 0, 0.6);
 }
 
-.floating-elements {
+.facebook-btn {
+  background: #1877F2;
+  color: #ffffff;
+}
+
+.facebook-btn:hover {
+  background: #145dbf;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(24, 119, 242, 0.6);
+}
+
+/* Parallax Section */
+.parallax-section {
+  position: relative;
+  min-height: 819px;
+  padding: 5rem 2rem;
+  background-image: url('../assets/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.parallax-overlay {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
 }
 
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(212, 165, 116, 0.3), transparent);
-  animation: float 15s infinite ease-in-out;
+.parallax-section .container {
+  position: relative;
+  z-index: 2;
 }
 
-.bubble:nth-child(1) {
-  width: 300px;
-  height: 300px;
-  top: 10%;
-  left: 10%;
-  animation-delay: 0s;
+.content-block {
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  color: #ffffff;
 }
 
-.bubble:nth-child(2) {
-  width: 200px;
-  height: 200px;
-  top: 60%;
-  right: 15%;
-  animation-delay: 5s;
+.content-block h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  text-transform: lowercase;
 }
 
-.bubble:nth-child(3) {
-  width: 250px;
-  height: 250px;
-  bottom: 10%;
-  left: 50%;
-  animation-delay: 10s;
+.content-block p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0) scale(1); }
-  50% { transform: translateY(-30px) scale(1.1); }
+.learn-more {
+  display: inline-block;
+  color: #7cae49;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.features-section {
-  max-width: 1400px;
-  margin: -80px auto 4rem;
-  padding: 0 2rem;
+.learn-more:hover {
+  color: #82a868;
+}
+
+/* Identity Section */
+.identity-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.identity-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #7cae49;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.identity-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
-  position: relative;
-  z-index: 3;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.feature-card {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
+.identity-card {
+  background: #ffffff;
   padding: 2.5rem;
-  border-radius: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.identity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(124, 174, 73, 0.2);
+}
+
+.identity-card h3 {
+  font-size: 1.8rem;
+  color: #7cae49;
+  margin-bottom: 1rem;
+}
+
+.identity-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333333;
+}
+
+/* Beliefs Section */
+.beliefs-section {
+  padding: 5rem 2rem;
+  background-color: #323D3F;
+  color: #ffffff;
+}
+
+.beliefs-section h2 {
   text-align: center;
-  box-shadow: 0 10px 40px var(--shadow);
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.beliefs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.belief-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 10px;
+  border-left: 4px solid #7cae49;
   transition: all 0.3s;
 }
 
-.feature-card:hover {
-  box-shadow: 0 15px 50px var(--shadow);
+.belief-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
 }
 
-.feature-icon {
-  font-size: 3.5rem;
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-}
-
-.feature-card h3 {
-  font-size: 1.8rem;
-  color: var(--dark);
+.belief-item h4 {
+  font-size: 1.5rem;
+  color: #7cae49;
   margin-bottom: 1rem;
-}
-
-.feature-card p {
-  color: var(--dark);
-  margin-bottom: 1.5rem;
-  opacity: 0.8;
-}
-
-.feature-card a {
-  color: var(--primary);
-  text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
 }
 
-.feature-card a:hover {
-  color: var(--accent);
+.belief-item p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #cccccc;
 }
 
-.today-manna-preview {
-  max-width: 1000px;
-  margin: 4rem auto;
+/* Tamil Section */
+.tamil-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #82a868 0%, #7cae49 100%);
+  color: #ffffff;
+}
+
+.tamil-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.tamil-text {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 0 2rem;
 }
 
-.today-manna-preview h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: var(--primary);
-  margin-bottom: 2rem;
-}
-
-.manna-card {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px var(--shadow);
-}
-
-.manna-card h3 {
-  font-size: 2rem;
-  color: var(--dark);
-  margin-bottom: 1rem;
-}
-
-.scripture {
-  font-size: 1.2rem;
-  color: var(--primary);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.verse {
-  font-style: italic;
-  font-size: 1.1rem;
-  color: var(--dark);
-  padding: 1.5rem;
-  background: rgba(212, 165, 116, 0.1);
-  border-left: 4px solid var(--primary);
-  margin-bottom: 1.5rem;
-}
-
-.read-more {
-  display: inline-block;
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.read-more:hover {
-  color: var(--accent);
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2rem;
+  .hero-section {
+    padding: 2rem 1rem;
   }
 
-  .hero-content p {
+  .dispensation-chart,
+  .motto-card {
+    max-width: 100%;
+  }
+
+  .welcome-section {
+    min-height: 400px;
+    background-attachment: scroll;
+  }
+
+  .welcome-section h2 {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .welcome-section .large-text {
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+  }
+
+  .welcome-section blockquote {
+    font-size: 1rem;
+  }
+
+  .promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .youtube-icon {
+    font-size: 4rem;
+  }
+
+  .promo-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .promo-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .youtube-btn,
+  .facebook-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .parallax-section {
+    background-attachment: scroll;
+  }
+
+  .content-block h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-block p {
     font-size: 1.1rem;
   }
 
-  .features-section {
-    margin-top: 2rem;
+  .beliefs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tamil-text {
+    font-size: 1rem;
+    text-align: left;
   }
 }

@@ -17,9 +17,9 @@ const Navbar = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/daily-manna', label: 'Daily Manna' },
-    { path: '/magazines', label: 'Magazines' },
-    { path: '/events', label: 'Events' },
+    { path: '/bible-study', label: 'Bible Study' },
+    { path: '/resources', label: 'Resources' },
+    { path: '/conventions', label: 'Conventions' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' }
   ];

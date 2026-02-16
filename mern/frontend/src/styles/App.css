@@ -5,19 +5,20 @@
 }
 
 :root {
-  --primary: #8B4513;
-  --secondary: #D4A574;
-  --accent: #C19A6B;
-  --light: #F5E6D3;
-  --dark: #3E2723;
+  --primary: #7cae49;
+  --secondary: #82a868;
+  --accent: #323D3F;
+  --light: #ffffff;
+  --dark: #333333;
+  --text-light: #999999;
   --white: #FFFFFF;
-  --shadow: rgba(139, 69, 19, 0.15);
+  --shadow: rgba(124, 174, 73, 0.15);
 }
 
 body {
   font-family: 'Georgia', 'Times New Roman', serif;
   color: var(--dark);
-  background: linear-gradient(135deg, #F5E6D3 0%, #E8D5C4 100%);
+  background: var(--light);
   line-height: 1.6;
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHeart, FaBook, FaUsers, FaGlobe } from 'react-icons/fa';
 import '../styles/AboutPage.css';
 
 const AboutPage = () => {
@@ -11,81 +10,65 @@ const AboutPage = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <h1>About Us</h1>
-        <p>Serving God's people since 1918</p>
+        <h1>About Bible Standard Ministries</h1>
+        <p>Laymen's Home Missionary Movement - Spreading Bible Truth Since 1918</p>
       </motion.div>
 
-      <section className="mission-section">
-        <motion.div 
-          className="mission-content"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          <h2>Our Mission</h2>
-          <p>Bible Standard Ministries is dedicated to spreading the Gospel of Jesus Christ through daily devotions, publications, and community outreach. We believe in the power of God's Word to transform lives and bring hope to all who seek Him.</p>
-        </motion.div>
-      </section>
-
-      <section className="values-section">
-        <h2>Our Core Values</h2>
-        <div className="values-grid">
-          <motion.div 
-            className="value-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <FaBook className="value-icon" />
-            <h3>Biblical Truth</h3>
-            <p>We stand firmly on the Word of God as our foundation</p>
-          </motion.div>
-
-          <motion.div 
-            className="value-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <FaHeart className="value-icon" />
-            <h3>Love & Compassion</h3>
-            <p>Serving others with Christ's love in our hearts</p>
-          </motion.div>
-
-          <motion.div 
-            className="value-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <FaUsers className="value-icon" />
-            <h3>Community</h3>
-            <p>Building strong fellowship among believers</p>
-          </motion.div>
-
-          <motion.div 
-            className="value-card"
-            whileHover={{ scale: 1.05 }}
-          >
-            <FaGlobe className="value-icon" />
-            <h3>Global Reach</h3>
-            <p>Spreading the Gospel to all nations</p>
-          </motion.div>
+      <section className="origin-section">
+        <div className="container">
+          <h2>Our Origin</h2>
+          <p>The Bible Standard came into existence through the efforts of Professor Paul S. L. Johnson and Professor Raymond G. Jolly, who installed its headquarters in Pennsylvania.</p>
+          <p>From their studies of the Scriptures they came to the understanding that God's Plan of Salvation is far greater in scope and His mercy much more extensive than have been previously recognized.</p>
+          <p>They set their goals to make this wonderful message available to as many as had a "hearing ear," and were dedicated to the accomplishment of this goal.</p>
+          <p>They taught that Bible doctrine is interpreted correctly only when it is done in harmony with every other Scripture passage and teaching in the Word. Bible Standard Ministries holds to this belief today.</p>
         </div>
       </section>
 
-      <section className="history-section">
-        <h2>Our History</h2>
-        <div className="timeline">
-          <div className="timeline-item">
-            <h3>1918</h3>
-            <p>Bible Standard Ministries was founded with a vision to provide daily spiritual nourishment</p>
+      <section className="mission-section">
+        <div className="container">
+          <h2>Our Mission</h2>
+          <p>We are an international, nonsectarian religious Movement devoted to upholding the authenticity of the Sacred Scriptures; that they are inspired with the Holy Spirit of God and are profitable for the instruction of the Christian in righteousness (2 Tim. 3:16).</p>
+          <p>It is our contention that, if the religions of today would conform their teachings to the principles set forth in the Bible, much of the moral degradation that prevails on every hand would be diminished.</p>
+        </div>
+      </section>
+
+      <section className="editors-section">
+        <div className="container">
+          <h2>The Editors</h2>
+          
+          <div className="editor-card">
+            <h3>Paul S. L. Johnson</h3>
+            <p>Paul S. L. Johnson graduated from Capital University of Columbus, Ohio with high honors. He also attended the Theological Seminary of the Ohio Synod of the Lutheran Church. Pastor Johnson was a Greek and Hebrew scholar, which in a very special way gave him the skills necessary to understand the Bible from the original languages.</p>
+            <p>Although the doctrine taught in the seminary was that of eternal torment, he came to understand that a God of perfect Wisdom, Justice, Power and Love, would not nor could not punish His enemies forever. He came to see that the Bible teaching is that the punishment for sin is death, not eternal torment.</p>
+            <p>He served as Executive Trustee of the Laymen's Home Missionary Movement from 1920 until 1950.</p>
           </div>
-          <div className="timeline-item">
-            <h3>1950</h3>
-            <p>Launched our monthly magazine reaching thousands of readers</p>
+
+          <div className="editor-card">
+            <h3>Raymond G. Jolly</h3>
+            <p>Raymond G. Jolly graduated from Bloomsburg State College with high honors. He studied theology and the classics at Lafayette College in Easton, Pennsylvania. He served for some time in the Presbyterian Church, then left to promote the Gospel from a non-sectarian standpoint.</p>
+            <p>He served as Executive Trustee of the Laymen's Home Missionary Movement from 1950 until 1979.</p>
           </div>
-          <div className="timeline-item">
-            <h3>2000</h3>
-            <p>Expanded our ministry with community events and outreach programs</p>
+
+          <div className="editor-card">
+            <h3>August Gohlke</h3>
+            <p>August Gohlke began high school at the early age of 12. Later he was privately tutored in Greek and Hebrew by Professor Paul S. L. Johnson. Pastor Gohlke was privileged to lecture extensively on Bible subjects throughout Europe and America.</p>
+            <p>He was the Executive Trustee of the Laymen's Home Missionary Movement from 1979 until December 1985.</p>
           </div>
-          <div className="timeline-item">
-            <h3>2024</h3>
-            <p>Embracing digital platforms to reach a global audience</p>
+
+          <div className="editor-card">
+            <h3>Bernard W. Hedman</h3>
+            <p>Bernard W. Hedman was Executive Trustee of the Laymen's Home Missionary Movement from 1986 until January, 2004. He came to Pastor Johnson at a time of great need and became one of the leading assistants to the previous Directors, in the publishing work, with special privileges of service to Pastor Paul S. L. Johnson.</p>
+          </div>
+
+          <div className="editor-card">
+            <h3>Ralph M. Herzig</h3>
+            <p>Ralph M. Herzig graduated from Westfield State College, and worked with the previous leaders of the Movement. He was elected as Executive Trustee and Director of the Laymen's Home Missionary Movement in 2004-2014.</p>
+            <p>With this position Pastor Herzig also assumed the office of General Editor of The Bible Standard magazine and our publications in general.</p>
+          </div>
+
+          <div className="editor-card">
+            <h3>Leon J. Snyder</h3>
+            <p>Leon J. Snyder was schooled by and worked with previous leaders of the Movement. He is currently serving as the Movement's Executive and Editor of Bible Standard Ministries publications.</p>
           </div>
         </div>
       </section>

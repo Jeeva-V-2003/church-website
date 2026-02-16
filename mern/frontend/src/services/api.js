@@ -9,26 +9,23 @@ const api = axios.create({
   },
 });
 
-export const dailyMannaAPI = {
-  getToday: () => api.get('/daily-manna/today'),
-  getAll: () => api.get('/daily-manna/all'),
-  getByDate: (date) => api.get(`/daily-manna/${date}`),
-  create: (data) => api.post('/daily-manna', data),
+export const bibleStudyAPI = {
+  getAll: () => api.get('/bible-study'),
+  getLatest: () => api.get('/bible-study/latest'),
+  create: (data) => api.post('/bible-study', data),
 };
 
-export const magazineAPI = {
-  getAll: () => api.get('/magazines'),
-  getLatest: () => api.get('/magazines/latest'),
-  getById: (id) => api.get(`/magazines/${id}`),
-  create: (data) => api.post('/magazines', data),
+export const publicationAPI = {
+  getAll: () => api.get('/publications'),
+  getMagazines: () => api.get('/publications/magazines'),
+  getLatest: () => api.get('/publications/latest'),
+  create: (data) => api.post('/publications', data),
 };
 
-export const eventsAPI = {
-  getAll: () => api.get('/events'),
-  getUpcoming: () => api.get('/events/upcoming'),
-  getPast: () => api.get('/events/past'),
-  getById: (id) => api.get(`/events/${id}`),
-  create: (data) => api.post('/events', data),
+export const conventionAPI = {
+  getAll: () => api.get('/conventions'),
+  getUpcoming: () => api.get('/conventions/upcoming'),
+  create: (data) => api.post('/conventions', data),
 };
 
 export default api;

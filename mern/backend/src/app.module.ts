@@ -1,17 +1,17 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { DailyMannaModule } from './modules/daily-manna/daily-manna.module';
-import { MagazineModule } from './modules/magazine/magazine.module';
-import { EventsModule } from './modules/events/events.module';
+import { BibleStudyModule } from './modules/bible-study/bible-study.module';
+import { PublicationModule } from './modules/publication/publication.module';
+import { ConventionModule } from './modules/convention/convention.module';
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
     MongooseModule.forRoot(process.env.MONGODB_URI || 'mongodb://localhost:27017/lhmm'),
-    DailyMannaModule,
-    MagazineModule,
-    EventsModule,
+    BibleStudyModule,
+    PublicationModule,
+    ConventionModule,
   ],
 })
 export class AppModule {}
