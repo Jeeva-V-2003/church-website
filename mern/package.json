@@ -1,0 +1,16 @@
+{
+  "name": "lhmm-website",
+  "version": "1.0.0",
+  "description": "Bible Standard Ministries Website",
+  "scripts": {
+    "setup": "npm run install-all",
+    "dev": "npm start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd backend && npm run start:dev",
+    "client": "cd frontend && npm start",
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
